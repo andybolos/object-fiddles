@@ -90,13 +90,28 @@ console.log(backPack);
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
-  
+  var me = {
+      name: "Andy",
+      age: 25,
+      height: "6 foot 2 inches",
+      gender: "Male",
+      married: "Absolutely",
+      eyeColor: "Brown",
+      hairColor: "Brown",
+
+  }
+
 
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
-
+//
+// var displayMe = function(obj) {
+//  for (var key in obj) {
+//      alert(obj[key]);
+//    };
+//  };
 
 
 
@@ -108,11 +123,20 @@ console.log(backPack);
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
+  var album = {
+      one: "3:30",
+      two: "3:45",
+      three: "4:44",
+      four: "2:50",
+      five: "3:22"
+  }
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
+for (var key in album) {
+    alert(key);
+};
 
 
 
@@ -124,11 +148,23 @@ console.log(backPack);
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
+  var states = {
+    utah: 1000000,
+    maine: 2000000,
+    california: 300000,
+    mexico: 24000000,
+    hawaii: 7
+  };
+
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
-
+for (var key in states) {
+    if (states[key] > 30000) {
+        alert(key);
+    }
+};
 
 
 
@@ -149,11 +185,18 @@ var user = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
+  for (var key in user) {
+      if (!user[key]) {
+        delete user[key];
+      }
+  };
+
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
-
+user.name = "Andy Bolos";
+user.username = "abolos111";
 
 
 
@@ -177,11 +220,13 @@ var user = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
+  user.name = "Tyler S. McGinnis";
+  user.email = "tyler.mcginnis@devmountain.in";
 
 //Now call the sayName method that's on the user object which will alert the users email
 
   //Code Here
-
+user.sayName();
 
 
 
@@ -193,16 +238,28 @@ var user = {
 //Create an empty object called methodCollection.
 
   //Code Here
+var methodCollection = {};
+
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
+methodCollection.alertHello = function() {
+     alert("hello")
+ };
+methodCollection.logHello = function() {
+     console.log("hello");
+ };
+
+
 
 //Now call your alertHello and logHello methods.
 
   //Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 
@@ -213,7 +270,11 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
   //Code Here
-
+var MakePerson = function(name, birthday, ssn) {
+    this.name = name;
+    this.birthday = birthday;
+    this.ssn = ssn;
+}
 
 
 //NEXT PROBLEM
@@ -223,7 +284,11 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-
+var MakeCard = function(address, access) {
+    var userCard = 
+    this.address = address;
+    this.access = access;
+};
 
 
 //NEXT PROBLEM
