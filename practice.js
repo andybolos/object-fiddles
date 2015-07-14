@@ -277,6 +277,7 @@ var MakePerson = function(name, birthday, ssn) {
 }
 
 
+
 //NEXT PROBLEM
 
 
@@ -285,7 +286,6 @@ var MakePerson = function(name, birthday, ssn) {
 
   //Code Here
 var MakeCard = function(address, access) {
-    var userCard = 
     this.address = address;
     this.access = access;
 };
@@ -301,3 +301,13 @@ var MakeCard = function(address, access) {
 */
 
   //Code Here
+  var bindCard = function(person, card) {
+      var fullInfo = {};
+      for (var item in person){
+          fullInfo[item] = person[item];
+      }
+      for (var item in card) {
+          fullInfo[item] = card[item];
+      }
+      return fullInfo;
+  };
